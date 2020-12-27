@@ -6,6 +6,10 @@ import java.util.List;
 import jp.co.axa.apidemo.dto.EmployeeDTO;
 import jp.co.axa.apidemo.entity.Employee;
 
+/**
+ * Base test class for basic data
+ *
+ */
 public class BaseTest {
 	
 	public static EmployeeDTO buildEmployeeDTO()

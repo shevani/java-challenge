@@ -25,10 +25,11 @@ public class EmployeeController {
 
 	@Autowired
 	private EmployeeService employeeService;
-	
+
 	/**
 	 * Retrieve all employees
-	 * @Param 
+	 * 
+	 * @Param
 	 * @return Response Entity response
 	 */
 	@GetMapping("/employees")
@@ -37,11 +38,12 @@ public class EmployeeController {
 		List<EmployeeDTO> emp = employeeService.retrieveEmployees();
 		return ResponseEntity.ok(emp);
 
-
 	}
+
 	/**
 	 * Get employee by employee Id
-	 * @Param  long EmployeeId
+	 * 
+	 * @Param long EmployeeId
 	 * @return Response Entity response
 	 */
 	@GetMapping("/employees/{employeeId}")
@@ -51,9 +53,11 @@ public class EmployeeController {
 		Optional<EmployeeDTO> employee = employeeService.getEmployeeById(employeeId);
 		return ResponseEntity.ok(employee.get());
 	}
+
 	/**
 	 * Create new employee.
-	 * @Param  EmployeeDTO employeeDetails
+	 * 
+	 * @Param EmployeeDTO employeeDetails
 	 * @return Response Entity response
 	 */
 	@PostMapping("/employees")
@@ -65,28 +69,30 @@ public class EmployeeController {
 
 	/**
 	 * Create new employee.
-	 * @Param  long employeeId
+	 * 
+	 * @Param long employeeId
 	 * @return Response Entity response
 	 */
 	@DeleteMapping("/employees/{employeeId}")
 	@ApiOperation(value = "Delete employee with given Employee ID", notes = "Delete the employee", response = Employee.class)
 	public ResponseEntity delete(@PathVariable Long employeeId) throws ResourceNotFoundException {
-        employeeService.deleteEmployee(employeeId);
-        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
-    }
-	
+		employeeService.deleteEmployee(employeeId);
+		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+	}
+
 	/**
 	 * Update employee with employeeDetails
-	 * @Param  long employeeId
-	 * @Param  EmployeeDTO employeeDetails
+	 * 
+	 * @Param long employeeId
+	 * @Param EmployeeDTO employeeDetails
 	 * @return Response Entity response
 	 */
 	@PutMapping("/employees/{employeeId}")
 	@ApiOperation(value = "Update employee record with given Employee ID", notes = "Update the employee", response = Employee.class)
 	public ResponseEntity<EmployeeDTO> updateEmployee(@PathVariable(name = "employeeId") Long employeeId,
 			@Valid @RequestBody EmployeeDTO employeeDetails) throws ResourceNotFoundException {
-        EmployeeDTO dto = employeeService.updateEmployee(employeeId,employeeDetails);
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(dto);
+		EmployeeDTO dto = employeeService.updateEmployee(employeeId, employeeDetails);
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(dto);
 
 	}
 

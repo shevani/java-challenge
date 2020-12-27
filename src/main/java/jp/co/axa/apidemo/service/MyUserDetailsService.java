@@ -10,15 +10,14 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MyUserDetailsService implements UserDetailsService{
-	
+public class MyUserDetailsService implements UserDetailsService {
+
 	/**
-	 *  Set a user for accessing rest API's
+	 * Set a user for accessing rest API's
 	 */
 	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
-	{
-		return new User("admin","password",new ArrayList<>());
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		return new User("admin", "password", new ArrayList<>());
 	}
 
 }

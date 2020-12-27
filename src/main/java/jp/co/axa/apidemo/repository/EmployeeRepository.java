@@ -5,6 +5,10 @@ import org.springframework.stereotype.Repository;
 
 import jp.co.axa.apidemo.entity.Employee;
 
+/**
+ * Employee Repository
+ *
+ */
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee,Long> {
 }

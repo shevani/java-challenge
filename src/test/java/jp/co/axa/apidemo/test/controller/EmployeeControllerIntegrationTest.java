@@ -59,8 +59,9 @@ public class EmployeeControllerIntegrationTest {
 	public void setUp() {
 		mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 	}
+
 	/*
-	 * Integration test for create employee 
+	 * Integration test for create employee
 	 */
 	@Test
 	public void testCreateEmployee35_whenValidInput_thenReturnsSuccess() throws Exception {
@@ -75,6 +76,7 @@ public class EmployeeControllerIntegrationTest {
 				.andExpect(jsonPath("$.department", is(dto.getDepartment())))
 				.andExpect(jsonPath("$.salary", is(dto.getSalary())));
 	}
+
 	/*
 	 * Integration test to fetch employee by id.
 	 */
@@ -95,7 +97,7 @@ public class EmployeeControllerIntegrationTest {
 	}
 
 	/*
-	 * Integration test to test delete employee functionality. 
+	 * Integration test to test delete employee functionality.
 	 */
 	@Test
 	public void testDeleteEmployee() throws Exception {
