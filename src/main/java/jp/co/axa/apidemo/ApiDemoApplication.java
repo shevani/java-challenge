@@ -18,7 +18,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * Application for Employee CRUD operations usein Rest API
+ * Application for Employee CRUD operations in Rest API
  */
 @EnableSwagger2
 @SpringBootApplication
