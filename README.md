@@ -26,10 +26,10 @@ Implemented the following in the existing code.
 - Added detailed messages to the Swagger API UI.
 
 ### Would have implemented following if more time permitted
-1) UI based Rest API.
-2) Advanced authentication by Spring Boot.
-3) Implement test cases for all Classes like Controller, Entity etc
-4)Database like MySQL instead of in memory database
+- UI based Rest API.
+- Advanced authentication by Spring Boot.
+- Implement test cases for all Classes like Controller, Entity etc
+- Database like MySQL instead of in memory database
 
 #### My experience in Java
 
