@@ -24,6 +24,7 @@ Implemented the following in the existing code.
 - Implemented Integration test and Service Layer Unit test cases.
 - Used Mockito and JUnit for test cases.
 - Added detailed messages to the Swagger API UI.
+- Tested database caching with Postman
 
 ### Would have implemented following if more time permitted
 - UI based Rest API.
