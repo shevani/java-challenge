@@ -32,9 +32,6 @@ Implemented the following in the existing code.
 - Database like MySQL instead of in memory database
 
 #### My experience in Java
-
-Please let us know more about your Java experience in a few sentences. For example:
-
 - I have around 7 years of experience in web application development.
 - 3 years of experience in PHP and 4 years in Java
 - Experience coding in Spring, Spring MVC
